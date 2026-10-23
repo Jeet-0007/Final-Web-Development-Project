@@ -5,7 +5,7 @@
 **Student Name**: Jeet Dey  
 **GitHub Username**: Jeet-0007  
 **Repository Name**: `Final-Web-Development-Project` (or `shopease`)  
-**Submission Date**: October 2026  
+  
 
 ---
 
