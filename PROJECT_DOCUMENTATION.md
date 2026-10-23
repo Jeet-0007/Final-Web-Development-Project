@@ -4,7 +4,7 @@
 **Project Title**: ShopEase — Modern Responsive E-Commerce Product Catalog  
 **Student Name**: Jeet Dey  
 **GitHub Username**: Jeet-0007  
-**Repository Name**: `final-web-development-project` (or `shopease`)  
+**Repository Name**: `Final-Web-Development-Project` (or `shopease`)  
 **Submission Date**: October 2026  
 
 ---
