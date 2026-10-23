@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase — Final Project Report & Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #3730a3;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #f9fafb;
+            --card-bg: #ffffff;
+            --border: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 40px 20px;
+        }
+
+        .report-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+            padding: 48px;
+        }
+
+        .header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 28px;
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e0e7ff;
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+            background: #f8fafc;
+            padding: 18px 24px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .meta-item {
+            font-size: 0.95rem;
+        }
+
+        .meta-item strong {
+            color: #374151;
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 36px 0 16px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #374151;
+            font-size: 1.02rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .screenshot-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-caption {
+            padding: 10px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4b5563;
+            background: #f9fafb;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .links-box {
+            background: #eef2ff;
+            border-left: 4px solid var(--primary);
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+        }
+
+        .links-box p {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .links-box a {
+            color: var(--primary);
+            word-break: break-all;
+            text-decoration: underline;
+        }
+
+        .print-btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .print-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .report-container {
+                padding: 24px;
+            }
+            .screenshots-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .report-container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <div class="header">
+            <div>
+                <span class="badge">6-Week Web Development Internship Project</span>
+                <h1>ShopEase — Final Project Report</h1>
+                <p style="color: var(--text-light); margin-bottom: 0;">Comprehensive technical documentation, evaluation overview, and project reflection.</p>
+            </div>
+            <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta-item">
+                <strong>Project Title</strong>
+                ShopEase E-Commerce Catalog
+            </div>
+            <div class="meta-item">
+                <strong>Student Name</strong>
+                Jeet Dey
+            </div>
+            <div class="meta-item">
+                <strong>GitHub Handle</strong>
+                @Jeet-0007
+            </div>
+            <div class="meta-item">
+                <strong>Total Marks</strong>
+                100 Marks Target
+            </div>
+        </div>
+
+        <h2>🎯 1. Project Objective</h2>
+        <p>The objective of this final project is to synthesize front-end web development knowledge acquired during the 6-week internship into an industry-standard, fully responsive, and interactive e-commerce catalog website. The project showcases mastery in semantic HTML5 markup, modern CSS3 styling (Flexbox, Grid, CSS Variables, Media Queries), and modular JavaScript (ES6+), combined with structured Git version control and automated GitHub Pages deployment.</p>
+
+        <h2>🌐 2. Project Overview</h2>
+        <p><strong>ShopEase</strong> is a modern e-commerce web application featuring dynamic catalog management across four popular merchandise categories. Shoppers can seamlessly search products in real-time, filter by category tags, sort by price or rating, inspect detailed quick-view modals, and manage an interactive cart with live subtotal, tax, and discount computations. The checkout pipeline incorporates comprehensive client-side form validation before generating a unique order confirmation receipt. Additionally, the application supports persistent dark/light theme switching.</p>
+
+        <h2>🛠️ 3. Technologies Used</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Technology</th>
+                    <th>Implementation Highlights</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Markup</strong></td>
+                    <td>HTML5</td>
+                    <td>Semantic elements (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;), ARIA accessibility, responsive viewport meta tags.</td>
+                </tr>
+                <tr>
+                    <td><strong>Styling</strong></td>
+                    <td>CSS3</td>
+                    <td>Design tokens (CSS variables), Flexbox, CSS Grid layouts, mobile-first media queries, glassmorphism, micro-animations.</td>
+                </tr>
+                <tr>
+                    <td><strong>Interactivity</strong></td>
+                    <td>JavaScript (ES6+)</td>
+                    <td>DOM manipulation, event delegation, localStorage state persistence, regex form validators, dynamic UI rendering.</td>
+                </tr>
+                <tr>
+                    <td><strong>Version Control</strong></td>
+                    <td>Git & GitHub</td>
+                    <td>Structured commit history following semantic commit guidelines (feat, style, chore, docs).</td>
+                </tr>
+                <tr>
+                    <td><strong>Deployment</strong></td>
+                    <td>GitHub Pages</td>
+                    <td>Static hosting with relative asset pathways ensuring zero broken dependencies.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>✨ 4. Key Interactive Features</h2>
+        <ul>
+            <li><strong>Dynamic Product Catalog:</strong> 12 curated products rendered via JavaScript data models with badges, discounts, and real-time inventory indicators.</li>
+            <li><strong>Instant Live Search & Multi-Filters:</strong> Filter by category (Electronics, Clothing, Accessories, Footwear) and instant keyword search without page reloads.</li>
+            <li><strong>Dynamic Sorting:</strong> Sort products by Price (Low to High / High to Low), Customer Rating, and Alphabetical order.</li>
+            <li><strong>Persistent Shopping Cart:</strong> Full CRUD operations (Add, Quantity Increment/Decrement, Remove) synchronized across pages via <code>localStorage</code>.</li>
+            <li><strong>Discount Coupon System:</strong> Real-time coupon verification (e.g. <code>SAVE10</code>) applying dynamic percentage discounts.</li>
+            <li><strong>Multi-Step Form Validation:</strong> Rigorous client-side input validation on checkout with immediate visual feedback and error messaging.</li>
+            <li><strong>Dark Mode Support:</strong> Smooth dark theme toggle remembering user preference between sessions.</li>
+            <li><strong>Toast Notifications:</strong> Non-intrusive feedback toasts for cart updates, newsletter submissions, and coupon applications.</li>
+        </ul>
+
+        <h2>📸 5. Website Screenshots</h2>
+        <div class="screenshots-grid">
+            <div class="screenshot-card">
+                <img src="images/homepage.png" alt="Homepage Hero Section">
+                <div class="screenshot-caption">Figure 1: Homepage & Hero Banner</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/product_grid.png" alt="Product Grid & Filters">
+                <div class="screenshot-caption">Figure 2: Product Grid with Category Filters & Search</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/dark_mode.png" alt="Dark Mode View">
+                <div class="screenshot-caption">Figure 3: Modern Dark Mode UI</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/cart.png" alt="Shopping Cart Page">
+                <div class="screenshot-caption">Figure 4: Shopping Cart Page & Summary Calculations</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/checkout.png" alt="Checkout Form">
+                <div class="screenshot-caption">Figure 5: Checkout Form & Payment Methods</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/order_success.png" alt="Order Confirmation">
+                <div class="screenshot-caption">Figure 6: Order Confirmation Modal with Order ID</div>
+            </div>
+        </div>
+
+        <h2>🔗 6. Project Links</h2>
+        <div class="links-box">
+            <p><strong>GitHub Repository:</strong> <a href="https://github.com/Jeet-0007/final-web-development-project" target="_blank">https://github.com/Jeet-0007/final-web-development-project</a></p>
+            <p><strong>Live GitHub Pages Website:</strong> <a href="https://jeet-0007.github.io/final-web-development-project/" target="_blank">https://jeet-0007.github.io/final-web-development-project/</a></p>
+        </div>
+
+        <h2>💡 7. Project Reflection</h2>
+        <p><strong>Challenges Faced:</strong> Coordinating state across multiple independent HTML pages without external framework dependencies was the initial hurdle. In addition, constructing a responsive layout that maintained visual harmony across diverse screen sizes—from compact mobile viewports (360px) to ultra-wide desktop monitors—demanded disciplined CSS architecture.</p>
+        <p><strong>Solutions Implemented:</strong> Built a centralized state management utility leveraging the browser's <code>localStorage</code> API. Designed CSS layouts around CSS Grid with <code>auto-fill</code> and <code>minmax()</code> functions combined with Flexbox, guaranteeing fluid transitions across all breakpoints.</p>
+        <p><strong>Key Learnings:</strong> Solidified foundational expertise in semantic HTML, asynchronous DOM manipulation, CSS variable theming, and professional Git versioning workflows with atomic commit practices.</p>
+        <p><strong>Future Improvements:</strong> Integration of a backend REST API with Express.js/MongoDB, integration of payment gateways (Stripe/Razorpay), user account authentication, and order tracking histories.</p>
+    </div>
+</body>
+</html>
