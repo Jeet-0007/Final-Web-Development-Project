@@ -91,4 +91,4 @@ Deepened mastery of asynchronous DOM event flows, semantic HTML structure, CSS c
 Integrating a backend REST API with Node.js/Express, a real payment gateway (Razorpay/Stripe), and user authentication with order history tracking.
 
 ---
-**Word Count**: ~480 words (adhering to the 400–500 word limit).
+
