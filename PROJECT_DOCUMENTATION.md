@@ -46,29 +46,29 @@ The objective of this final project is to synthesize front-end web development s
 ## 📸 5. Website Screenshots
 
 ### 5.1 Homepage & Hero Section
-![ShopEase Homepage](images/homepage.png)
+![ShopEase Homepage](./homepage.png)
 
 ### 5.2 Responsive Product Grid & Filters
-![ShopEase Product Grid](images/product_grid.png)
+![ShopEase Product Grid](./product_grid.png)
 
 ### 5.3 Dark Mode Experience
-![ShopEase Dark Mode](images/dark_mode.png)
+![ShopEase Dark Mode](./dark_mode.png)
 
 ### 5.4 Shopping Cart Page
-![ShopEase Cart](images/cart.png)
+![ShopEase Cart](./cart.png)
 
 ### 5.5 Checkout Form & Order Summary
-![ShopEase Checkout](images/checkout.png)
+![ShopEase Checkout](./checkout.png)
 
 ### 5.6 Order Confirmation Modal
-![ShopEase Order Confirmation](images/order_success.png)
+![ShopEase Order Confirmation](./order_success.png)
 
 ---
 
 ## 🔗 6. Project Links
 
-- **GitHub Repository**: [https://github.com/Jeet-0007/final-web-development-project](https://github.com/Jeet-0007/final-web-development-project)
-- **Live GitHub Pages Website**: [ https://jeet-0007.github.io/eshop-website/]
+- **GitHub Repository**:[https://github.com/Jeet-0007/Final-Web-Development-Project](https://github.com/Jeet-0007/Final-Web-Development-Project)
+- **Live GitHub Pages Website**:[ https://jeet-0007.github.io/Final-Web-Development-Project/ ](https://jeet-0007.github.io/Final-Web-Development-Project/)
 
 ---
 
